@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400&display=swap');
+
+@font-face {
+  font-family: FiraFlott;
+  src: url(./FiraFlott.ttf);
+  font-style: normal;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
+code {
+  font-family: FiraFlott;
+}
+
+.hljs-keyword {
+  font-style: italic;
+}
