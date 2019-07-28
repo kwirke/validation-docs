@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { platinum, gunmetal } from '../Style/Colors';
+import { platinum, blackCoral } from '../Style/Colors';
 
 const ItemButton = styled.a`
     display: flex;
@@ -12,12 +12,17 @@ const ItemButton = styled.a`
     font-size: 20px;
     text-decoration: none;
     :hover {
-        background-color: ${gunmetal};
+        background-color: ${blackCoral};
     }
 `;
 
-export const Item = ({ to, children }) => (
-    <ItemButton href={to} target="_blank" rel="noopener noreferrer">
+export const Item = ({ to, children, className }) => (
+    <ItemButton
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+    >
         <span>{children}</span>
     </ItemButton>
 );

@@ -1,4 +1,5 @@
 // Dark greys
+export const blackCoral = '#576167'
 export const gunmetal = '#2d3941'
 export const darkGunmetal = '#19262e'
 

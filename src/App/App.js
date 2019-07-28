@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import './App.css'
 import {Navbar} from '../Navbar/Navbar'
-import { deepKoamaru, eerieBlack } from '../Style/Colors';
+import { deepKoamaru, eerieBlack, gunmetal, darkGunmetal } from '../Style/Colors';
+import { mediaLaptop } from '../Style/MediaQueries';
 
 const Layout = styled.div`
     display: flex;
@@ -18,15 +19,18 @@ const Body = styled.div`
 `
 
 const Sidebar = styled.div`
-    width: 333px;
+    min-width: 333px;
     height: 100%;
     background-color: ${eerieBlack};
+    ${mediaLaptop} {
+        display: none;
+    }
 `
 
 const Page = styled.div`
     width: 100%;
     height: 100%;
-    // background-color: ${eerieBlack};
+    background-color: ${darkGunmetal};
 `
 
 export const App = () => (
