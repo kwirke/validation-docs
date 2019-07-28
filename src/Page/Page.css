@@ -1,0 +1,10 @@
+.typescript.hljs {
+    background-color: #2d3941;
+    display: inline-block;
+}
+
+.typescript .hljs-keyword,
+.typescript .hljs-params,
+.typescript .hljs-built_in {
+    color: #dee0e2 !important;
+}

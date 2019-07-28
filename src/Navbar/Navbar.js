@@ -1,24 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-    platinum,
-    independence,
-    gunmetal,
-} from '../Style/Colors';
+import { platinum, independence, gunmetal } from '../Style/Colors';
 import { Item } from './Item';
 import { Icon } from 'react-icons-kit';
 import { github } from 'react-icons-kit/fa/github';
 import { npm } from './npmIcon';
 import { mediaTablet, mediaMobile } from '../Style/MediaQueries';
 import { Hamburger } from './Hamburger';
+import { navbarHeight } from '../App/App.styles';
 
 const bottomMargin = '10px';
 
 const NavbarWrapper = styled.div`
+    position: fixed;
     display: flex;
     align-items: center;
     background-color: ${gunmetal};
-    height: 54px;
+    height: ${navbarHeight};
+    width: 100%;
 `;
 const Title = styled.h1`
     display: inline-block;
@@ -75,9 +74,9 @@ const IconLink = ({ icon, alt, to }) => (
     </StyledItem>
 );
 
-export const Navbar = () => (
+export const Navbar = ({ isSidebarOpen, toggleSidebar }) => (
     <NavbarWrapper>
-        <Hamburger />
+        <Hamburger isOpen={isSidebarOpen} onClick={toggleSidebar} />
         <a href="/">
             <Title>Validation</Title>
         </a>

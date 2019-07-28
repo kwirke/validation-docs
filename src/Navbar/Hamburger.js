@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { navicon } from 'react-icons-kit/fa/navicon';
 import Icon from 'react-icons-kit';
+import { close } from 'react-icons-kit/fa/close';
+import { navicon } from 'react-icons-kit/fa/navicon';
 import { platinum, blackCoral } from '../Style/Colors';
 import { mediaLaptop } from '../Style/MediaQueries';
 
@@ -20,8 +21,8 @@ const LaptopButton = styled.div`
     }
 `;
 
-export const Hamburger = ({ onClick }) => (
+export const Hamburger = ({ onClick, isOpen }) => (
     <LaptopButton onClick={onClick}>
-        <Icon size={30} icon={navicon} />
+        <Icon size={30} icon={isOpen ? close : navicon} />
     </LaptopButton>
 );
