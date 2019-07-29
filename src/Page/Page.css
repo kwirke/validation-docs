@@ -1,6 +1,7 @@
 .typescript.hljs {
     background-color: #2d3941;
     display: inline-block;
+    border-radius: 5px;
 }
 
 .typescript .hljs-keyword,

@@ -26,18 +26,6 @@ const Method = ({name}) => (
     </li>
 )
 
-// const isIn = flip(includes)
-// const propOf = flip(prop)
-
-// const Methods = ({names}) => (
-//     Object.keys(apiData.methods)
-//         .filter(isIn(names))
-//         .map(pipe(
-//             propOf(apiData.methods),
-//             method => <Method method={method}/>,
-//         ))
-// )
-
 const Methods = ({names}) => (
     <ul>
         {names.map(name => (
